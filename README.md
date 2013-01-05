@@ -4,8 +4,6 @@ A small, convenient benchmark-library.
 
 ## Features
 
-* Sensible defaults and default-output
-
 * Displays relative performance; "B was 1.4x slower than A"
 
 * Returns benchmark-results as Array of Hashes (for easy integration with your unit-tests or CI)
