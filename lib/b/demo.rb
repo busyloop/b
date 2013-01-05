@@ -20,7 +20,7 @@ puts
 # Same as above but display results in seconds instead of ms.
 # HINT: You may also set :writer => nil if you want no output at all.
 cw = B::ConsoleWriter.new({:multiply=>1, :round=>6})
-result B.enchmark("Nap time; output in seconds", :output => cw, :rounds => 3) do
+results = B.enchmark("Nap time; output in seconds", :output => cw, :rounds => 3) do
   job('sleep 0.1', :rounds => 10) { sleep 0.1 }
   job('sleep 0.5') { sleep 0.5 }
   job('sleep 1.0') { sleep 1.0 }
