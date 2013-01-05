@@ -70,12 +70,8 @@ module B
           a.send(@compare) <=> b.send(@compare)
         end
       end
-      @buffer.each_with_index do |job, i|
-        if 0 == i
-          job.x = 1.0
-        else
-          job.x = job.send(@compare) / @buffer[0].send(@compare)
-        end
+      @buffer.each do |job|
+        job.x = job.send(@compare) / @buffer[0].send(@compare)
       end
       until @buffer.empty? do
         @parent.start @buffer[0]
