@@ -11,7 +11,9 @@ module B
   def self.enchmark(id='Untitled Benchmark', opts={}, &block)
     opts = {:output => ConsoleWriter.new}.merge(opts)
     opts[:parent] = opts[:output]
-    Blockenspiel.invoke(block, Enchmark.new(id, opts)).run!
+    em = Enchmark.new(id, opts)
+    Blockenspiel.invoke(block, em)
+    em.run!
   end
  
   # B::Ase
@@ -24,7 +26,7 @@ module B
     def run!
       @children.map {|c| c.run! unless c.nil?} unless @children.nil?
       post_run if self.respond_to? :post_run
-      @children.map(&:to_h)
+      @children.nil? ? [] : @children.map(&:to_h)
     end
 
     def register(job)

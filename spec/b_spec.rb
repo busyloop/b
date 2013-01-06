@@ -42,6 +42,13 @@ describe B do
             job('d', :rounds => 10) { d.call }
           end
         end
+
+        it 'tolerates any return value from the DSL block' do
+          a = mock(:a)
+          B.enchmark do
+            nil
+          end
+        end
       end
 
       describe "return value" do
@@ -57,6 +64,14 @@ describe B do
               h.should have_key a
             end
           end
+        end
+
+        it 'is [] when no jobs are defined' do
+          a = mock(:a)
+          r = B.enchmark do
+            nil
+          end
+          r.should == []
         end
 
         it "retval[*][:x] is nil" do
