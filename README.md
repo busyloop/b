@@ -1,4 +1,4 @@
-# B::enchmark [![Build Status](https://travis-ci.org/busyloop/b.png?branch=master)](https://travis-ci.org/busyloop/b) [![Dependency Status](https://gemnasium.com/busyloop/b.png)](https://gemnasium.com/busyloop/b)
+# B::enchmark [![Build Status](https://travis-ci.org/busyloop/b.png?branch=master)](https://travis-ci.org/busyloop/b) [![Dependency Status](https://gemnasium.com/busyloop/b.png)](https://gemnasium.com/busyloop/b) [![Gem Version](https://badge.fury.io/rb/b.svg)](https://badge.fury.io/rb/b)
 
 A small, convenient benchmark-library.
 
@@ -9,7 +9,7 @@ A small, convenient benchmark-library.
 * Returns benchmark-results as Array of Hashes (for easy integration with your unit-tests or CI)
 
 * Output can be customized with a simple Plugin-API (ships with plugins for TSV and HTML)
- 
+
 * High precision (via [hitimes](https://github.com/copiousfreetime/hitimes))
 
 
@@ -43,10 +43,10 @@ end
 
 ```
 -- Sleep "performance" ---------------------------------------------------------------
-        rounds         r/s        mean         max         min    ± stddev      x mean 
-100ms       10        9.99      100.13      100.17      100.11        0.02        1.00 
-200ms       10        5.00      200.14      200.17      200.11        0.02        2.00 
-300ms       10        3.33      300.13      300.18      300.11        0.02        3.00 
+        rounds         r/s        mean         max         min    ± stddev      x mean
+100ms       10        9.99      100.13      100.17      100.11        0.02        1.00
+200ms       10        5.00      200.14      200.17      200.11        0.02        2.00
+300ms       10        3.33      300.13      300.18      300.11        0.02        3.00
 ```
 
 ## Getting started
