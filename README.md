@@ -1,4 +1,4 @@
-# B::enchmark [![Build Status](https://travis-ci.org/busyloop/b.png?branch=master)](https://travis-ci.org/busyloop/b) [![Dependency Status](https://gemnasium.com/busyloop/b.png)](https://gemnasium.com/busyloop/b) [![Gem Version](https://badge.fury.io/rb/b.svg)](https://badge.fury.io/rb/b)
+# B::enchmark [![Build Status](https://travis-ci.org/busyloop/b.png?branch=master)](https://travis-ci.org/busyloop/b) [![Gem Version](https://badge.fury.io/rb/b.svg)](https://badge.fury.io/rb/b)
 
 A small, convenient benchmark-library.
 
